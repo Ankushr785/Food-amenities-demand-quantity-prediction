@@ -50,3 +50,30 @@ Since time series forecasting hasn't been used in this approach, we don't need t
 * The input variables to be estimated remain #CustomerCount and #TotalGTOrders
 * Average selling price of the particular SKU along with the average selling price of onion is used for the prediction of the above input quantities
 * A polynomial ridge regression model is employed using a pipeline, with alpha = 18.0 for CustomerCount prediction, = 21.0 for TotalGTOrders prediction.
+
+![cc_prediction](https://cloud.githubusercontent.com/assets/26039458/26774741/412b91cc-49c1-11e7-9f3b-8012325b0d89.png)
+
+![gtorders_prediction](https://cloud.githubusercontent.com/assets/26039458/26774714/2a6c8720-49c1-11e7-820e-bf7c9f735622.png)
+
+![f_iv_sumstats](https://cloud.githubusercontent.com/assets/26039458/26774712/22124dda-49c1-11e7-8810-cf09a5df2423.png)
+
+**Data Modelling
+
+>Model Name
+* Ridge Regression
+
+>Model accuracy on training and test sets
+* On training set
+1. RMSE = 91.23 Kg
+2. Residuals mean = -3.1361886268e-14 (approx. 0) Kg
+3. R-squared = 0.908
+
+![training_fit](https://cloud.githubusercontent.com/assets/26039458/26775633/3f61973e-49c5-11e7-811d-f98f28c8af08.png)
+
+* On test set
+1. RMSE = 93.6 Kg
+2. Residuals mean = -35.34 Kg
+3. R-Squared = 0.945
+
+![predictions](https://cloud.githubusercontent.com/assets/26039458/26774754/4b5404ea-49c1-11e7-8723-676ae233c6c7.png)
+
