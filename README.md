@@ -3,7 +3,7 @@ A comprehensive approach (Polynomial Ridge Regression, Pipeline) towards predict
 
 ***Business Problem***: To predict the expected order quantity of food amenities based on past data.
 
-**Data Definition (test SKU = Cucumber (Indian))
+**Data Definition (test SKU = Cucumber (Indian))**
 
 >Data Variables considered and their Definition
 * Input variables
@@ -20,7 +20,7 @@ A comprehensive approach (Polynomial Ridge Regression, Pipeline) towards predict
 >Time Period considered
 * 17/03/2017 till 18/05/2017
 
-**Data Understanding and Processing
+**Data Understanding and Processing**
 
 >Outlier detection and removal
 * Amount of quantities lying below 5 percentile of the range or above 95 percentile of the range were considered outliers
@@ -57,7 +57,7 @@ Since time series forecasting hasn't been used in this approach, we don't need t
 
 ![f_iv_sumstats](https://cloud.githubusercontent.com/assets/26039458/26774712/22124dda-49c1-11e7-8810-cf09a5df2423.png)
 
-**Data Modelling
+**Data Modelling**
 
 >Model Name
 * Ridge Regression
@@ -76,4 +76,19 @@ Since time series forecasting hasn't been used in this approach, we don't need t
 3. R-Squared = 0.945
 
 ![predictions](https://cloud.githubusercontent.com/assets/26039458/26774754/4b5404ea-49c1-11e7-8723-676ae233c6c7.png)
+
+>Model Stability
+* With 56 days in training dataset and 7 in test
+1. For #CustomerCount prediction - alpha = 12.0, RMSE = 18 Customers, R-squared = -.02 (worse than baseline)
+2. For #TotalGTOrders prediction - alpha = 21.0, RMSE = 21 Customers, R-squares = 0.58
+3. No change in the model for #ActualDemand prediction - RMSE = 97.71 Kg, R-squared = 0.944
+
+* With 60 days in training dataset and 3 in test
+1. For #CustomerCount prediction - alpha = 15.0, RMSE = 16 Customers, R-squared = 0.65 (worse than baseline)
+2. For #TotalGTOrders prediction - alpha = 21.0, RMSE = 13 Customers, R-squares = 0.92
+3. No change in the model for #ActualDemand prediction - RMSE = 84.49 Kg, R-squared = 0.944
+
+>The model is quite competitive with the existing (running) approach
+
+>The model is not calibrated for taking customer inputs or some other external inputs (cam be done easily).
 
