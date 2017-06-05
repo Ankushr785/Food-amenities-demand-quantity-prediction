@@ -34,3 +34,19 @@ A comprehensive approach (Polynomial Ridge Regression, Pipeline) towards predict
 
 * Output
 
+![output_var_sumstat](https://cloud.githubusercontent.com/assets/26039458/26774720/333901b2-49c1-11e7-8de0-7a9922dfaabe.png)
+
+>Training and Test Datasets
+* Training set - 17/03/2017 to 13/05/2017
+* Test set - 14/05/2017 to 18/05/2017
+
+>Seasonal effect
+
+Since time series forecasting hasn't been used in this approach, we don't need to worry about seasonality.
+
+>Creating Data Input to model
+
+* Assumption: The various prices of the SKU are known on the particular day or can at least be predicted with a very nice accuracy
+* The input variables to be estimated remain #CustomerCount and #TotalGTOrders
+* Average selling price of the particular SKU along with the average selling price of onion is used for the prediction of the above input quantities
+* A polynomial ridge regression model is employed using a pipeline, with alpha = 18.0 for CustomerCount prediction, = 21.0 for TotalGTOrders prediction.
