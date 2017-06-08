@@ -90,5 +90,5 @@ Since time series forecasting hasn't been used in this approach, we don't need t
 
 >The model is quite competitive with the existing (running) approach
 
->The model is not calibrated for taking customer inputs or some other external inputs (cam be done easily).
+>The model is not calibrated for taking customer inputs or some other external inputs (can be done easily).
 
